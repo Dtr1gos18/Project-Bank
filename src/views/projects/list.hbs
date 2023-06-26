@@ -1,0 +1,29 @@
+<main class="index">
+    <div class="container p-4">
+    <div class="row">
+        {{#each projects}}
+         <div class="col-md-12 h-50">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h1 class="card-title text-uppercase">
+                       <a href="/projectDetails/{{id}}?title={{title}}&description={{description}}&evolved={{evolved}}&threat={{threat}}&state={{state}}&creation_date={{creation_date}}" class="text-danger">
+                        {{title}}
+                       </a>
+                    </h1>
+                    <p class="m-2">{{description}}</p>
+                    <p class="m-2">Involucrados: {{evolved}}</p>
+                    <a href="/projects/edit/{{id}}" class="btn btn-danger">Editar</a>
+                </div>
+            </div>
+         </div>
+         {{else}}
+          <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>Aún no tienes proyectos guardados</p>
+                <a href="/projects/add" class="btn btn-primary">Crear</a>
+            </div>
+          </div>
+        {{/each}}
+    </div>
+</div>
+</main>

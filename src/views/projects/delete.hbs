@@ -1,0 +1,45 @@
+<main class="index">
+  <div class="container p-4">
+    <div class="row">
+        {{#each projects}}
+         <div class="col-md-12 h-50">
+            <div class="card text-center">
+                <div class="card-body">
+
+                    <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Título</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Involucrados</th>
+                        <th scope="col">Riegos-Amenazas</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Fecha de Creación</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>{{title}}</td>
+                        <td>{{description}}</td>
+                        <td>{{evolved}}</td>
+                        <td>{{threat}}</td>
+                        <td>{{state}}</td>
+                        <td>{{formatDate creation_date}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                    <a href="/projects/delete/{{id}}" class="btn btn-danger col-md-4">Borrar</a>
+                </div>
+            </div>
+         </div>
+         {{else}}
+          <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p class="text-danger">Aún no hay proyectos guardados</p>
+            </div>
+          </div>
+        {{/each}}
+    </div>
+</div>
+</main>
