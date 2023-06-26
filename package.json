@@ -4,7 +4,8 @@
   "description": "Proyecto para registro de proyecto empresariales.",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/"
+    "dev": "nodemon src/",
+    "start": "node src/index.js"
   },
   "author": "Jefferson Mauricio Sanchez Picón",
   "license": "ISC",
